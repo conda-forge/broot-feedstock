@@ -6,4 +6,4 @@ set -o xtrace -o nounset -o pipefail -o errexit
 cargo install --locked --root "$PREFIX" --path .
 
 # strip debug symbols
-strip "$PREFIX/bin/broot"
+"$STRIP" "$PREFIX/bin/broot"
