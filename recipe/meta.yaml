@@ -26,6 +26,7 @@ test:
 about:
   home: https://github.com/Canop/broot
   license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: Balanced tree view + fuzzy search + BFS + customizable launcher
   doc_url: https://dystroy.org/broot/
