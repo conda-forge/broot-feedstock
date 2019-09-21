@@ -1,4 +1,4 @@
-{% set version = "0.9.5" %}
+{% set version = "0.9.6" %}
 {% set native = 'm2w64-' if win else '' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Canop/broot/archive/v{{ version }}.tar.gz
-  sha256: 5c75e12b94baac1dc01dd92867682df09e39a8dc6935579d0aeee004c0adc0a7
+  sha256: af8b36d5d4242ec1bd86925f0f664a610e7e94309686ef0874df6bc0867a0c3e
 
 build:
   number: 0
@@ -17,7 +17,7 @@ requirements:
   build:
     - rust
     - {{ compiler('c') }}
-    - {{native}}binutils
+    - {{native}}binutils      # [win]
 
 test:
   commands:
@@ -26,6 +26,7 @@ test:
 about:
   home: https://github.com/Canop/broot
   license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: Balanced tree view + fuzzy search + BFS + customizable launcher
   doc_url: https://dystroy.org/broot/
