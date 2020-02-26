@@ -15,7 +15,7 @@ build:
 requirements:
   build:
     - rust
-    - {{ compiler('c') }}
+    - {{ compiler('c') }}     # [unix]
     - {{native}}binutils      # [win]
 
 test:
