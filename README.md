@@ -5,7 +5,7 @@ Home: https://github.com/Canop/broot
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Balanced tree view + fuzzy search + BFS + customizable launcher
 
