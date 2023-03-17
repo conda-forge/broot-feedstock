@@ -1,11 +1,11 @@
-About broot
-===========
+About broot-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/broot-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Canop/broot
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/broot-feedstock/blob/main/LICENSE.txt)
 
 Summary: Balanced tree view + fuzzy search + BFS + customizable launcher
 
