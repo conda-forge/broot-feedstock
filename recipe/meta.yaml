@@ -1,4 +1,4 @@
-{% set version = "1.29.0" %}
+{% set version = "1.30.0" %}
 {% set native = 'm2w64-' if win else '' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Canop/broot/archive/v{{ version }}.tar.gz
-  sha256: 11309da9ff5413e5cff4a9d68fe47a45870fb7225246becbb0dde925cb4b41ba
+  sha256: e398026e20705e9738bfce79f2a0ca79fdb76a177371cad5788ed58c41161359
 
 build:
   number: 0
