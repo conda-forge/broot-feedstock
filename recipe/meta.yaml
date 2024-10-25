@@ -10,13 +10,14 @@ source:
   sha256: 8aee20cc8c339262dbfd1b064c261cf9628ec671124f94412c23343bbdcb691b
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - {{ compiler('rust') }}
-    - {{ compiler('c') }}     # [unix]
-    - {{ native }}binutils      # [win]
+    - {{ stdlib("c") }}
+    - cargo-bundle-licenses
 
 test:
   commands:
@@ -26,7 +27,9 @@ about:
   home: https://github.com/Canop/broot
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
   summary: Balanced tree view + fuzzy search + BFS + customizable launcher
   doc_url: https://dystroy.org/broot/
 
