@@ -1,11 +1,11 @@
-{% set version = "1.46.5" %}
+{% set version = "1.47.0" %}
 package:
   name: broot
   version: {{ version }}
 
 source:
   url: https://github.com/Canop/broot/archive/v{{ version }}.tar.gz
-  sha256: 730f07fd8450476204878f42c27b1db4f965053c2da5a602eae8f2764c5b92ce
+  sha256: 25aa9eaefe1ae7b2853325d726cd97d5eeca1a24df35b01b92ee462d88c6a0f1
 
 build:
   number: 0
