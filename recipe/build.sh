@@ -10,4 +10,10 @@ cargo-bundle-licenses \
     --output THIRDPARTY.yml
 
 # build statically linked binary with Rust
-cargo install --no-track --locked --root "$PREFIX" --path .
+cargo install \
+    --root "$PREFIX" \
+    --path . \
+    --no-track \
+    --locked \
+    --bins \
+    --features clipboard
