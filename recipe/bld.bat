@@ -8,6 +8,8 @@ cargo install --locked ^
     --root "%PREFIX%" ^
     --path . ^
     --no-track ^
+    --bins ^
+    --features clipboard ^
     || goto :error
 
 :: dump licenses
