@@ -3,13 +3,20 @@ About broot-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/broot-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/Canop/broot
+Home: https://dystroy.org/broot/
 
 Package license: MIT
 
-Summary: Balanced tree view + fuzzy search + BFS + customizable launcher
+Summary: Broot is a better way to navigate directories, find files, and launch commands.
+
+Development: https://github.com/Canop/broot
 
 Documentation: https://dystroy.org/broot/
+
+Broot is a high-performance terminal file manager and navigator designed to provide a comprehensive overview of
+large directory structures using a balanced, tree-based visualization. It enables users to instantly locate files
+through fuzzy searching, navigate deeply nested hierarchies without losing context, and perform file manipulations
+or custom shell commands directly from the interface.
 
 Current build status
 ====================
