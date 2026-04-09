@@ -3,13 +3,20 @@ About broot-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/broot-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/Canop/broot
+Home: https://dystroy.org/broot/
 
 Package license: MIT
 
-Summary: Balanced tree view + fuzzy search + BFS + customizable launcher
+Summary: Broot is a better way to navigate directories, find files, and launch commands.
+
+Development: https://github.com/Canop/broot
 
 Documentation: https://dystroy.org/broot/
+
+Broot is a high-performance terminal file manager and navigator designed to provide a comprehensive overview of
+large directory structures using a balanced, tree-based visualization. It enables users to instantly locate files
+through fuzzy searching, navigate deeply nested hierarchies without losing context, and perform file manipulations
+or custom shell commands directly from the interface.
 
 Current build status
 ====================
@@ -40,6 +47,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7750&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/broot-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7750&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/broot-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
                 </a>
               </td>
             </tr><tr>
