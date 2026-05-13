@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.56.2"
+  version: "1.56.3"
 
 package:
   name: broot
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/Canop/broot/archive/v${{ version }}.tar.gz
-  sha256: 3e7be4252c76565f6d71b34bd07d26e1444b9ac2e1c8271c724f6e866fe75565
+  sha256: 48f7fdc6e68539a951207d892916824bb08e8752d2c6aa414ef994f08b6ba43c
 
 build:
-  number: 2
+  number: 0
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
@@ -85,7 +85,7 @@ about:
   homepage: https://dystroy.org/broot/
   documentation: https://dystroy.org/broot/
   repository: https://github.com/Canop/broot
- 
+
 extra:
   recipe-maintainers:
     - dbast
