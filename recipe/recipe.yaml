@@ -35,10 +35,9 @@ build:
           - mkdir %LIBRARY_PREFIX%\share\fish\vendor_completions.d
           - mkdir %LIBRARY_PREFIX%\share\zsh\site-functions
           - mkdir %LIBRARY_PREFIX%\share\man\man1
-          - powershell -Command "Get-ChildItem -Recurse target"
-          - powershell -Command "Copy-Item -Path 'target\release\build\broot-*\out\broot.bash' -Destination '%LIBRARY_PREFIX%\share\bash-completion\completions\broot'"
-          - powershell -Command "Copy-Item -Path 'target\release\build\broot-*\out\broot.fish' -Destination '%LIBRARY_PREFIX%\share\fish\vendor_completions.d\broot.fish'"
-          - powershell -Command "Copy-Item -Path 'target\release\build\broot-*\out\_broot'     -Destination '%LIBRARY_PREFIX%\share\zsh\site-functions\_broot'"
+          - powershell -Command "Copy-Item -Path 'target\*\release\build\broot-*\out\broot.bash' -Destination '%LIBRARY_PREFIX%\share\bash-completion\completions\broot'"
+          - powershell -Command "Copy-Item -Path 'target\*\release\build\broot-*\out\broot.fish' -Destination '%LIBRARY_PREFIX%\share\fish\vendor_completions.d\broot.fish'"
+          - powershell -Command "Copy-Item -Path 'target\*\release\build\broot-*\out\_broot'     -Destination '%LIBRARY_PREFIX%\share\zsh\site-functions\_broot'"
           - powershell -Command "Copy-Item -Path 'man\page'                                    -Destination '%LIBRARY_PREFIX%\share\man\man1\broot.1'"
       - cargo-bundle-licenses --format yaml --output ./THIRDPARTY.yml
 
