@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.56.4"
+  version: "1.57.0"
 
 package:
   name: broot
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/Canop/broot/archive/v${{ version }}.tar.gz
-  sha256: ec49422f335965ee0338cd630869eb1fc6d974d43648bd483c802fd7e9aea99b
+  sha256: 28d576f218a92bbb3543124296fb24b40a323b21f586017d073155c44f1cb786
 
 build:
   number: 0
