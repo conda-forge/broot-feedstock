@@ -12,12 +12,14 @@ source:
   sha256: 61cb29922ef3953bae7f696b9f33fef51d85b5a4d85075c3612fcc6824663c37
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       CARGO_PROFILE_RELEASE_LTO: fat
       CARGO_PROFILE_RELEASE_STRIP: symbols
     content:
+      - if: target_platform == "linux-ppc64le"
+        then: export CARGO_BUILD_RUSTFLAGS="${CARGO_BUILD_RUSTFLAGS:-} -C link-arg=-fuse-ld=bfd"
       - if: unix
         then:
           - cargo auditable install --path=. --root="$PREFIX" --no-track --locked --bins --features=clipboard
@@ -27,9 +29,12 @@ build:
           - cp target/*/release/build/broot-*/out/broot.fish "$PREFIX"/share/fish/vendor_completions.d/broot.fish
           - cp target/*/release/build/broot-*/out/_broot     "$PREFIX"/share/zsh/site-functions/_broot
           - cp man/page                                      "$PREFIX"/share/man/man1/broot.1
+      - if: target_platform == "win-arm64"
+        then: cargo auditable install --path=. --root="%LIBRARY_PREFIX%" --no-track --locked --bins --features=clipboard --target aarch64-pc-windows-msvc
+      - if: target_platform == "win-64"
+        then: cargo auditable install --path=. --root="%LIBRARY_PREFIX%" --no-track --locked --bins --features=clipboard
       - if: win
         then:
-          - cargo auditable install --path=. --root="%LIBRARY_PREFIX%" --no-track --locked --bins --features=clipboard
           # copy shell completion files and prebuilt man page
           - mkdir %LIBRARY_PREFIX%\share\bash-completion\completions
           - mkdir %LIBRARY_PREFIX%\share\fish\vendor_completions.d
